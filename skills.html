@@ -20,7 +20,7 @@
 				<!-- Header -->
 				<!-- Note: The "styleN" class below should match that of the banner element. -->
 					<header id="header" class="alt style2">
-						<a href="index.html" class="logo"><strong>Home</strong></a>
+						<a href="index.html" class="logo"><strong>Back Home</strong></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -30,7 +30,7 @@
 					<nav id="menu">
 						<ul class="links">
 							<li><a href="index.html">Home</a></li>
-							<li><a href="landing.html">Landing</a></li>
+							<li><a href="experience.html">Experience</a></li>
 							<li><a href="generic.html">Generic</a></li>
 							<li><a href="elements.html">Elements</a></li>
 						</ul>
@@ -40,157 +40,84 @@
 						</ul>
 					</nav>
 
-				<!-- Banner -->
-				<!-- Note: The "styleN" class below should match that of the header element. -->
-					<section id="banner" class="style2">
-						<div class="inner">
-							<span class="image">
-								<img src="images/pic07.jpg" alt="" />
-							</span>
-							<header class="major">
-								<h1>Skills</h1>
-							</header>
-							<div class="content">
-								<p></p>
-							</div>
-						</div>
-					</section>
 
 				<!-- Main -->
 					<div id="main">
 
-						<!-- One -->
-							<section id="one">
-								<div class="inner">
-									<header class="major">
-										<h2>Overview</h2>
-									</header>
-									<p>I have worked as a SQA engineer for the last 12 years. That time has included experience with Medical Devices, in Cyber Security, Medical Software and FinTech. I've written automation frameworks in Cypress three times, and have been a consistent and active contributer to both API testing in and unit testing in Python. I am a certified SCRUM Master and have acted as such at two companies, and am also a certified SCRUM Product Owner. <br /><br />Each section goes into detail about the roles I've held at each company.
-								</div>
-							</section>
-
 						<!-- Two -->
 							<section id="two" class="spotlights">
 								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic08.jpg" alt="" data-position="center center" />
-									</a>
-									<div class="content">
+									<div class="content" style="width: 100%;">
 										<div class="inner">
 											<header class="major">
-												<h3>Hometap</h3>
+												<h3>Cypress</h3>
 											</header>
-											<p>Senior QA Engineer (May 2023 - Present)</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic09.jpg" alt="" data-position="top center" />
-									</a>
-									<div class="content">
-										<div class="inner">
+											<p>
+												I have built end to end automation frameworks in Cypress three times: </br></br>
+												
+												At VMWare Carbon Black, I ran the POC of Cypress alongside another engineer.
+												Once we proved out the framework suiting our needs, I spearheaded automating our regression test cases which had grown to cover 3 days worth of manual testing. 
+												Upon completion, we wrote documentation around best practices and how to write automation for our developers to contribute as well. </br></br>
+
+												At Brio Systems, I presented Cypress to the CTO in my first week there as they had no automation coverage for legacy software and we were about to begin development
+												of a new software. I did this by taking a piece of our legacy software and automating it in Cypress, then talking through the possibilities of extending the suite. I got 
+												buy-in and began development of our automation framework. While the initial ground work was happening with our new software, I was able to automate the process of initial contact with our software
+												to getting notified of lab results being ready by SMS, and then using a time-based-one-time-passcode to access the results. This was my first exposure to more complex integrations with Cypress, 
+												using Twilio to manifest the SMS portion and access the TBOTP via API. As development continued with the new software, I was also able to implement accessibility testing through AXE and form statefulness
+												by exposing the redux store. </br></br>
+
+												At Hometap, Cypress was already the chosen language when I joined but it was implemented poorly. It was done through page-object modeling which is not a Cypress best practice, and it was heavy on 
+												aliasing GraphQL calls and mutations in a very challenging to access manner. There was reliance on QA specific api endpoints and bypassing a lot of the production workflow which required a large refactor. 
+												I brought up the idea of persona driven testing and having end-to-end tests cover use cases to drive the software from end to end through the eyes of various stakeholders. We were also unable to execute these 
+												tests on our staging environment as we needed access to a outside email inbox. I set up access to a google user group via Google OAuth in our Cypress repository and created a recursive polling function
+												to monitor the inbox and avoid arbitrary waits. We were able to piece the two ideas and refactors together to get comprehensive end to end tests running on our staging environment during Release Candidate testing, 
+												ensuring much higher quality all around. I also helped to introduce component level testing via Cypress mocking out our backend and using only front end for more unit/integration level testing that was missing in our
+												MR pipelines. 
+											</p>
 											<header class="major">
-												<h3>Brio Systems</h3>
+												<h3>Postman</h3>
 											</header>
-											<p>Lead QA Engineer (Aug 2022 - May 2023)</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic10.jpg" alt="" data-position="25% 25%" />
-									</a>
-									<div class="content">
-										<div class="inner">
+											<p>
+												I have always built out individual components of our automation suites in a Postman collection. This helps to debug and attian information while developing future automation or
+												harden manual tests. An example of this is at Hometap: </br></br>
+												We have automation that spans Homeowner dashboard view and tasks all the way through internal Application Specialists and Underwriters seeing an investment through. I created a Postman collection
+												that authenticates as any user, uploads any accepted document type, completes any smart task, gets track info or document id's, generates legacy data for migration testing, and much more. This helps
+												the QA team ensure stability of leveraging API's consistently and being able to pull that into our automation once figured out. 
+											</p>
 											<header class="major">
-												<h3>VMWare Carbon Black</h3>
+												<h3>Python</h3>
 											</header>
-											<p>Member of Technical Staff III (Oct 2021 - Aug 2022) <br /> Member of Technical Staff II (Oct 2019 - Oct 2021) <br /> SQA Engineer II (April 2017 - Oct 2019) <br /> SQA Engineer I (Nov 2015 - April 2017)</p>
+											<p>
+												At VMWare Carbon Black, the bulf of our API testing was written in Python. When I joined I asked to contribute to that repository and help grow it. The team I was embedded on was a backend team so it fit well. 
+												I was able to call Atomic Red Team scripts via Python and then add tests to validate alert counts incrementing, then asserting the appropriate metadata that should be associated with those alerts. We had 
+												different threat reports, so there was an endless amount of ART tests to call and validate, this work was a constant throughout my time there. </br></br>
+
+												At Hometap, all of our unit testing automation was written in Unit Test. I wrote and proposed a TRD to our release and development guilds that we audit and update our framework to PyTest. The change was approved, 
+												and I am leading the effort to run a gap analysis of our code coverage for unit testing, and pivot our framework to PyTest as we add more tests and update existing ones. 
+											</p>
+											<header class="major">
+												<h3>Test Case Management</h3>
+											</header>
+											<p>
+											</p>
+											<header class="major">
+												<h3>Medical Standards</h3>
+											</header>
+											<p>
+											</p>
+											<header class="major">
+												<h3>Project/Product Management</h3>
+											</header>
+											<p>
+											</p>
 											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
+												<li><a href="./hometap.html" class="button">Learn more</a></li>
 											</ul>
 										</div>
 									</div>
 								</section>
 							</section>
-
 					</div>
-
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="#">information@untitled.tld</a>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>(000) 000-0000 x12387</span>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span>1234 Somewhere Road #5432<br />
-										Nashville, TN 00000<br />
-										United States of America</span>
-									</div>
-								</section>
-							</section>
-						</div>
-					</section>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
 
 			</div>
 
